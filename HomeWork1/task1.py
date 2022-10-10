@@ -1,11 +1,14 @@
 # ----- ЗАДАЧА 1 ----- 
 # Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
-def day_of_the_week (number):
-    if number > 5:
-        print(f'Данный день {number} - выходной')
-    else:
-        print(f'Данный день {number} - является рабочим')
+try:
+    def day_of_the_week (number):
+        if number > 5:
+            print(f'Данный день {number} - выходной')
+        else:
+            print(f'Данный день {number} - является рабочим')
 
-num = int(input('Введите цифру дня недели (1-7):'))
-day_of_the_week(num)
+    num = int(input('Введите цифру дня недели (1-7):'))
+    day_of_the_week(num)
+except:
+    print('ОШИБКА! Введено не число!!! - Введите число!')
