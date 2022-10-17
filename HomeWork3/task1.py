@@ -17,7 +17,12 @@ def sum_of_elements(arr):
         sum += arr[i]
     return sum
 
-num = int(input('Введите размерность списка: '))
+try:
+    num = int(input('Введите размерность списка: '))
+except ValueError as ex:
+    print('Введите целое число!')
+    exit(ex)
+
 list = create_list(num)
 print(list)
 print()

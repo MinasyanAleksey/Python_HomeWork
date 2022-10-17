@@ -13,6 +13,10 @@ def chenge_dec(n):
     
     return res
 
-num = int(input('Введите число: '))
+try:
+    num = int(input('Введите число: '))
+except ValueError as ex:
+    print('Введите целое число!')
+    exit(ex)
 dec = chenge_dec(num)
 print(f'Число {num} в десятичном выражении - {dec}')

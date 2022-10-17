@@ -31,8 +31,12 @@ def sorted_2d_list(arr_2d):
     print()       
     return arr_2d
 
-rows = int(input('Введите колличество строк: '))
-columns = int(input('Введите колличество столбцов: '))
+try:
+    rows = int(input('Введите колличество строк: '))
+    columns = int(input('Введите колличество столбцов: '))
+except ValueError as ex:
+    print('Введите целое число!')
+    exit(ex)
 
 list_2d = create_2d_list(rows, columns)
 

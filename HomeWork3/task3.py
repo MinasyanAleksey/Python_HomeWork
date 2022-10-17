@@ -18,7 +18,11 @@ def selection_decimal(list):
             list2.append(round(i%1, 2))
     return list2
 
-num = int(input('Введите размерность списка: '))
+try:
+    num = int(input('Введите размерность списка: '))
+except ValueError as ex:
+    print('Введите целое число!')
+    exit(ex)
 list = create_list(num)
 print(list)
 print()
